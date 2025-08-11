@@ -255,62 +255,176 @@
         </div>
     </section>
 
-    <!-- Hidden Sugars -->
-    <section class="section-padding px-8 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black mb-6 text-gray-900">
-                    <i class="fas fa-mask mr-4 text-red-500"></i>
-                    Sugar's Many Disguises
-                </h2>
-                <p class="text-xl text-gray-600 font-light max-w-3xl mx-auto">
-                    The food industry uses 60+ names to hide sugar. Here are the most deceptive:
-                </p>
-            </div>
-            
-            <div class="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-3xl p-12 shadow-lg">
-                <button onclick="revealSugars()" class="w-full luxury-button py-6 rounded-2xl text-xl font-semibold text-white mb-12 hover:scale-[1.02] transition-transform duration-300">
-                    <i class="fas fa-eye mr-3"></i>
-                    Reveal Hidden Sugars
-                </button>
-                
-                <div class="grid md:grid-cols-4 gap-6" id="sugar-grid">
-                    <div class="hidden-sugar-luxury bg-white/90 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl text-center shadow-md">
-                        <div class="text-lg font-semibold mb-2 text-gray-900">High Fructose Corn Syrup</div>
-                        <div class="text-sm text-red-500 font-medium">Most Common</div>
-                    </div>
-                    <div class="hidden-sugar-luxury bg-white/90 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl text-center shadow-md">
-                        <div class="text-lg font-semibold mb-2 text-gray-900">Dextrose</div>
-                        <div class="text-sm text-red-500 font-medium">Fast Absorbing</div>
-                    </div>
-                    <div class="hidden-sugar-luxury bg-white/90 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl text-center shadow-md">
-                        <div class="text-lg font-semibold mb-2 text-gray-900">Maltodextrin</div>
-                        <div class="text-sm text-red-500 font-medium">Highly Processed</div>
-                    </div>
-                    <div class="hidden-sugar-luxury bg-white/90 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl text-center shadow-md">
-                        <div class="text-lg font-semibold mb-2 text-gray-900">Agave Nectar</div>
-                        <div class="text-sm text-red-500 font-medium">"Healthy" Myth</div>
-                    </div>
-                    <div class="hidden-sugar-luxury bg-white/90 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl text-center shadow-md">
-                        <div class="text-lg font-semibold mb-2 text-gray-900">Brown Rice Syrup</div>
-                        <div class="text-sm text-red-500 font-medium">Organic Deception</div>
-                    </div>
-                    <div class="hidden-sugar-luxury bg-white/90 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl text-center shadow-md">
-                        <div class="text-lg font-semibold mb-2 text-gray-900">Cane Juice</div>
-                        <div class="text-sm text-red-500 font-medium">Still Sugar</div>
-                    </div>
-                    <div class="hidden-sugar-luxury bg-white/90 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl text-center shadow-md">
-                        <div class="text-lg font-semibold mb-2 text-gray-900">Caramel</div>
-                        <div class="text-sm text-red-500 font-medium">Hidden Everywhere</div>
-                    </div>
-                    <div class="hidden-sugar-luxury bg-white/90 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl text-center shadow-md">
-                        <div class="text-lg font-semibold mb-2 text-gray-900">Corn Sweetener</div>
-                        <div class="text-sm text-red-500 font-medium">Industrial Grade</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- HIDDEN SUGAR NAMES – AI/SaaS Glass Grid -->
+<section class="sugar-aliases" style="--accent:#15A76C; --bg:rgba(255,255,255,0.08); --glass:rgba(255,255,255,0.12); --border:rgba(255,255,255,0.35); margin:0;">
+  <div class="sa-wrap">
+    <header class="sa-head">
+      <h2 class="sa-title">Hidden Names for Sugar</h2>
+      <p class="sa-sub">Scan labels like a pro. If you see any of these, it’s added sugar by another name.</p>
+
+      <div class="sa-controls">
+        <input id="saSearch" type="text" placeholder="Filter (e.g., syrup, -ose, cane)…" class="sa-input">
+        <span id="saCount" class="sa-count"></span>
+      </div>
+    </header>
+
+    <div id="saGrid" class="sa-grid" aria-live="polite">
+      <!-- Each item is a single alias card -->
+      <button class="sa-card">Sucrose</button>
+      <button class="sa-card">Glucose</button>
+      <button class="sa-card">Fructose</button>
+      <button class="sa-card">Dextrose</button>
+      <button class="sa-card">Lactose</button>
+      <button class="sa-card">Maltose</button>
+      <button class="sa-card">Galactose</button>
+      <button class="sa-card">High-Fructose Corn Syrup</button>
+      <button class="sa-card">Corn Syrup</button>
+      <button class="sa-card">Corn Syrup Solids</button>
+      <button class="sa-card">Glucose-Fructose Syrup</button>
+      <button class="sa-card">Cane Sugar</button>
+      <button class="sa-card">Beet Sugar</button>
+      <button class="sa-card">Raw Sugar</button>
+      <button class="sa-card">Turbinado</button>
+      <button class="sa-card">Muscovado</button>
+      <button class="sa-card">Panela</button>
+      <button class="sa-card">Jaggery</button>
+      <button class="sa-card">Evaporated Cane Juice</button>
+      <button class="sa-card">Cane Juice</button>
+      <button class="sa-card">Golden Syrup</button>
+      <button class="sa-card">Invert Sugar</button>
+      <button class="sa-card">Molasses</button>
+      <button class="sa-card">Treacle</button>
+      <button class="sa-card">Sorghum Syrup</button>
+      <button class="sa-card">Brown Rice Syrup</button>
+      <button class="sa-card">Rice Syrup</button>
+      <button class="sa-card">Barley Malt</button>
+      <button class="sa-card">Barley Malt Syrup</button>
+      <button class="sa-card">Malt Syrup</button>
+      <button class="sa-card">Malt Extract</button>
+      <button class="sa-card">Maple Syrup</button>
+      <button class="sa-card">Honey</button>
+      <button class="sa-card">Agave Nectar</button>
+      <button class="sa-card">Coconut Sugar</button>
+      <button class="sa-card">Date Sugar</button>
+      <button class="sa-card">Palm Sugar</button>
+      <button class="sa-card">Grape Juice Concentrate</button>
+      <button class="sa-card">Apple Juice Concentrate</button>
+      <button class="sa-card">Fruit Juice Concentrate</button>
+      <button class="sa-card">Crystalline Fructose</button>
+      <button class="sa-card">Maltodextrin</button>
+      <button class="sa-card">Dextrin</button>
+      <button class="sa-card">Confectioners (Powdered) Sugar</button>
+      <button class="sa-card">Caster / Superfine Sugar</button>
+      <button class="sa-card">Caramel (Sugar)</button>
+      <button class="sa-card">Corn Sweetener</button>
+      <button class="sa-card">Evaporated Corn Sweetener</button>
+      <button class="sa-card">Brown Sugar</button>
+      <button class="sa-card">Glucose Syrup</button>
+      <button class="sa-card">Refiner’s Syrup</button>
+      <button class="sa-card">Panocha</button>
+      <button class="sa-card">Demarara</button>
+      <button class="sa-card">Mizuame</button>
+      <button class="sa-card">Ethyl Maltol (sweet flavor)</button>
+    </div>
+  </div>
+  <style>
+    /* ----- Section shell (glass, AI/SaaS aesthetic) ----- */
+    .sugar-aliases{ padding: clamp(28px, 6vw, 70px) 16px; background: transparent; }
+    .sugar-aliases *{ box-sizing: border-box; font-family: Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif; }
+    .sa-wrap{ max-width: 1150px; margin: 0 auto; }
+
+    .sa-head{
+      display: grid; gap: 10px; margin-bottom: 16px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px) saturate(120%);
+      -webkit-backdrop-filter: blur(14px) saturate(120%);
+      border-radius: 18px;
+      padding: clamp(16px, 3vw, 28px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    .sa-title{ margin:0; font-weight: 800; letter-spacing: -0.01em; line-height:1.1; color:#0b0f0c;
+      font-size: clamp(22px, 4.6vw, 40px); }
+    .sa-sub{ margin:0; color:rgba(11,15,12,.75); font-size: clamp(14px, 2.2vw, 16px); }
+
+    .sa-controls{
+      display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-top: 4px;
+    }
+    .sa-input{
+      flex:1 1 260px; min-width:220px;
+      padding: 12px 14px; border-radius: 14px; border: 1px solid var(--border);
+      background: rgba(255,255,255,.55);
+      outline: none;
+    }
+    .sa-input:focus{ border-color: var(--accent); box-shadow: 0 0 0 4px rgba(21,167,108,.15); }
+    .sa-count{ font-size: 13px; color: rgba(11,15,12,.7); padding: 6px 10px; border-radius: 999px;
+      border: 1px solid var(--border); background: rgba(255,255,255,.55); }
+
+    /* ----- Grid of sugar aliases ----- */
+    .sa-grid{
+      display:grid;
+      grid-template-columns: repeat( auto-fill, minmax(180px, 1fr) );
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .sa-card{
+      appearance:none; border:1px solid var(--border); border-radius:16px; padding:14px 14px;
+      text-align:left; font-weight:600; color:#0b0f0c; background: rgba(255,255,255,.7);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.06), 0 2px 0 0 rgba(255,255,255,.25) inset;
+      transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease, background .16s ease;
+      position:relative; overflow:hidden; cursor:default;
+    }
+
+    /* subtle stacked “lift” on hover / focus */
+    .sa-card:hover, .sa-card:focus{
+      transform: translateY(-2px);
+      border-color: color-mix(in oklab, var(--accent) 65%, #ffffff);
+      box-shadow: 0 10px 26px rgba(21,167,108,.18);
+      background: rgba(255,255,255,.92);
+    }
+
+    /* decorative accent stripe (top-right) */
+    .sa-card::after{
+      content:""; position:absolute; right:-30px; top:-30px; width:90px; height:90px; border-radius:50%;
+      background: radial-gradient(circle, color-mix(in oklab, var(--accent) 65%, #ffffff), transparent 60%);
+      opacity:.18; pointer-events:none;
+    }
+
+    /* mobile spacing */
+    @media screen and (max-width: 768px){
+      .sugar-aliases{ padding: 22px 14px; }
+      .sa-grid{ gap:10px; grid-template-columns: repeat( auto-fill, minmax(150px, 1fr) ); }
+    }
+  </style>
+
+  <script>
+    (function(){
+      var input = document.getElementById('saSearch');
+      var grid  = document.getElementById('saGrid');
+      var count = document.getElementById('saCount');
+      var items = Array.prototype.slice.call(grid.querySelectorAll('.sa-card'));
+
+      function updateCount(visible){
+        count.textContent = visible + " of " + items.length;
+      }
+      function filter(){
+        var q = (input.value || "").trim().toLowerCase();
+        var visible = 0;
+        items.forEach(function(el){
+          var match = el.textContent.toLowerCase().includes(q);
+          el.style.display = match ? 'block' : 'none';
+          if(match) visible++;
+        });
+        updateCount(visible);
+      }
+      input.addEventListener('input', filter);
+      // init
+      updateCount(items.length);
+    })();
+  </script>
+</section>
 
     <!-- Advanced Health Impact Calculator -->
     <section class="section-padding px-8 bg-gray-50">
@@ -552,186 +666,6 @@
                         <div class="text-sm text-gray-600">MonkVee health savings</div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution -->
-    <section class="section-padding px-8 bg-gradient-to-br from-emerald-900/30 to-blue-900/30">
-        <div class="max-w-7xl mx-auto text-center">
-            <div class="floating-element mb-12">
-                <div class="w-24 h-24 mx-auto luxury-glass rounded-3xl flex items-center justify-center">
-                    <i class="fas fa-lightbulb text-4xl text-yellow-400"></i>
-                </div>
-            </div>
-            
-            <h2 class="text-6xl md:text-7xl font-black mb-8 text-gradient">The Perfect Solution</h2>
-            <p class="text-2xl md:text-3xl mb-12 max-w-4xl mx-auto text-slate-300 font-light leading-relaxed">
-                MonkVee delivers 200x the sweetness with zero calories, zero glycemic impact, and zero compromise on taste.
-            </p>
-            
-            <div class="luxury-glass rounded-3xl p-12 max-w-4xl mx-auto">
-                <h3 class="text-4xl font-bold mb-6 accent-gradient">Pure. Natural. Revolutionary.</h3>
-                <p class="text-xl text-slate-300 font-light leading-relaxed mb-8">
-                    Extracted using only water and natural processes. No chemicals, no artificial additives, no hidden ingredients—just the pure essence of monk fruit.
-                </p>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold accent-gradient metric-number">0</div>
-                        <div class="text-sm text-slate-400 font-medium">Glycemic Index</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold accent-gradient metric-number">0</div>
-                        <div class="text-sm text-slate-400 font-medium">Calories</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold accent-gradient metric-number">100%</div>
-                        <div class="text-sm text-slate-400 font-medium">Natural</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="section-padding px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black mb-6 text-gradient">Transform Your Life</h2>
-                <p class="text-xl text-slate-300 font-light max-w-3xl mx-auto">
-                    Experience the difference when you eliminate sugar from your life
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="luxury-card rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-500">
-                    <div class="w-16 h-16 mx-auto luxury-glass rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-bolt text-2xl text-yellow-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gradient">Sustained Energy</h3>
-                    <p class="text-slate-300 font-light text-sm leading-relaxed">
-                        No more afternoon crashes or energy rollercoasters
-                    </p>
-                </div>
-                
-                <div class="luxury-card rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-500">
-                    <div class="w-16 h-16 mx-auto luxury-glass rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-smile-beam text-2xl text-emerald-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gradient">Stable Mood</h3>
-                    <p class="text-slate-300 font-light text-sm leading-relaxed">
-                        Balanced blood sugar equals balanced emotions
-                    </p>
-                </div>
-                
-                <div class="luxury-card rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-500">
-                    <div class="w-16 h-16 mx-auto luxury-glass rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-feather-alt text-2xl text-blue-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gradient">Digestive Comfort</h3>
-                    <p class="text-slate-300 font-light text-sm leading-relaxed">
-                        Say goodbye to bloating and digestive distress
-                    </p>
-                </div>
-                
-                <div class="luxury-card rounded-3xl p-8 text-center group hover:scale-105 transition-all duration-500">
-                    <div class="w-16 h-16 mx-auto luxury-glass rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i class="fas fa-bed text-2xl text-purple-400"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gradient">Better Sleep</h3>
-                    <p class="text-slate-300 font-light text-sm leading-relaxed">
-                        No sugar-induced insomnia or restless nights
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section-padding px-8 bg-black/20" id="testimonials">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20">
-                <h2 class="text-5xl md:text-6xl font-black mb-6 text-gradient">Trusted by Thousands</h2>
-                <p class="text-xl text-slate-300 font-light max-w-3xl mx-auto">
-                    Real transformations from real people who made the switch
-                </p>
-            </div>
-            
-            <div class="relative">
-                <div class="flex space-x-8 overflow-x-auto pb-6" id="testimonial-slider">
-                    <div class="testimonial-luxury luxury-card rounded-3xl p-10 min-w-96 flex-shrink-0">
-                        <div class="flex items-center mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
-                                <span class="text-white font-bold text-lg">SM</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg text-gradient">Sarah Mitchell</h4>
-                                <p class="text-sm text-slate-400 font-medium">Fitness Coach & Nutritionist</p>
-                            </div>
-                        </div>
-                        <div class="flex mb-6">
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        </div>
-                        <p class="text-slate-300 font-light leading-relaxed">
-                            "I've tested every sweetener on the market. MonkVee is the only one that delivers pure sweetness without any aftertaste or energy crashes. My clients love it."
-                        </p>
-                    </div>
-                    
-                    <div class="testimonial-luxury luxury-card rounded-3xl p-10 min-w-96 flex-shrink-0">
-                        <div class="flex items-center mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-emerald-500 rounded-2xl flex items-center justify-center mr-4">
-                                <span class="text-white font-bold text-lg">MR</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg text-gradient">Michael Rodriguez</h4>
-                                <p class="text-sm text-slate-400 font-medium">Type 2 Diabetic</p>
-                            </div>
-                        </div>
-                        <div class="flex mb-6">
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        </div>
-                        <p class="text-slate-300 font-light leading-relaxed">
-                            "Managing diabetes means watching every gram of sugar. MonkVee has been life-changing—zero blood sugar impact and it actually tastes amazing in my coffee."
-                        </p>
-                    </div>
-                    
-                    <div class="testimonial-luxury luxury-card rounded-3xl p-10 min-w-96 flex-shrink-0">
-                        <div class="flex items-center mb-6">
-                            <div class="w-14 h-14 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mr-4">
-                                <span class="text-white font-bold text-lg">LK</span>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg text-gradient">Dr. Lisa Kim</h4>
-                                <p class="text-sm text-slate-400 font-medium">Clinical Nutritionist</p>
-                            </div>
-                        </div>
-                        <div class="flex mb-6">
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                            <i class="fas fa-star text-yellow-400 text-lg"></i>
-                        </div>
-                        <p class="text-slate-300 font-light leading-relaxed">
-                            "I recommend MonkVee to all my patients. It's the cleanest, most natural sweetener available. No digestive issues, no cravings, just pure satisfaction."
-                        </p>
-                    </div>
-                </div>
-                
-                <button onclick="slideTestimonials('left')" class="absolute left-0 top-1/2 transform -translate-y-1/2 luxury-glass rounded-2xl w-14 h-14 flex items-center justify-center hover:bg-white/10 transition-all duration-300">
-                    <i class="fas fa-chevron-left text-lg"></i>
-                </button>
-                <button onclick="slideTestimonials('right')" class="absolute right-0 top-1/2 transform -translate-y-1/2 luxury-glass rounded-2xl w-14 h-14 flex items-center justify-center hover:bg-white/10 transition-all duration-300">
-                    <i class="fas fa-chevron-right text-lg"></i>
-                </button>
             </div>
         </div>
     </section>
